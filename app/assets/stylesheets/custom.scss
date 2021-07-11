@@ -163,3 +163,41 @@ $font-color: white;
   list-style-type: none;
   margin-top: 0.5em;
 }
+
+
+
+/* profile */
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  margin: 3em auto 0 auto;
+  background-color: rgb(100, 100, 200);
+}
+
+.profile-form-title {
+  font-size: 2.5em;
+  text-align: center; 
+  color: $font-color; 
+  margin-top: 0.7em;
+}
+
+.profile-label {
+  margin-left: 1.5em;
+  color: $font-color;
+}
+
+.profile-input-box {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
+  height: 1.8em;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  color: rgb(74, 59, 172);
+  &:focus {
+    color: rgb(74, 59, 172);
+  }
+}
+
