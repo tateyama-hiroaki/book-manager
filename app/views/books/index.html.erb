@@ -1,0 +1,27 @@
+<% provide(:title, 'Book List') %>
+
+<%= render 'layouts/header' %>
+
+<main>
+  <div class="main-inner">
+    <label class="menu-label">Book List</label>
+
+    <% book_list = [
+      'たのしいRuby',
+      '初めてのRuby',
+      'Rubyレシピブック',
+      'Rubyディスクトップリファレンス',
+      'プロを目指す人のRuby入門'
+    ] %>
+
+    <ul class="book-list-frame">
+      <% 4.times do |n| %>
+        <% book_list.each do |book| %>
+          <li class="book"><%= "#{book}" %></li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <p class="collection-of-books">Current Collection of Books：100 books</p>
+  </div>
+</main>

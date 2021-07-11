@@ -3,6 +3,7 @@
 $font-color: white;
 
 
+
 /* mixin */
 
 @mixin inner-size {
@@ -11,12 +12,14 @@ $font-color: white;
 }
 
 
+
 /* body */
 
 .body {
   background-color: rgb(74, 59, 172);
   margin: 0;  
 }
+
 
 
 /* header */
@@ -62,12 +65,17 @@ $font-color: white;
 }
 
 
-/* home */
+
+/* inner */
 
 .main-inner {
   @include inner-size;
   margin: 30px auto 0 auto;
 }
+
+
+
+/* menu-label */
 
 .menu-label {
   font-size: 1.5em;
@@ -75,6 +83,10 @@ $font-color: white;
   margin: 0 0 10px 0;
   color: $font-color;
 }
+
+
+
+/* home */
 
 .menu-container {
   width: 460px;
@@ -132,4 +144,22 @@ $font-color: white;
 .collection-of-books {
   color: $font-color;
   text-align: right;
+}
+
+
+
+/* index (book-list) */
+
+.book-list-frame {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+}
+
+.book {
+  color: $font-color;
+  list-style-type: none;
+  margin-top: 0.5em;
 }
