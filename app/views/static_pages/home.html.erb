@@ -1,0 +1,47 @@
+<% provide(:title, 'Home') %>
+
+<%= render 'layouts/header' %>
+
+<main>
+  <div class="main-inner">
+    <p class="menu-label">Menu</p>
+    <div class="menu-container">
+      <div class="button">
+        <div class="icon"><%= image_tag 'books-list-icon.png', alt: 'books-list-icon' %></div>
+        <div class="label"><%= link_to 'Books List', '#', class: 'link' %></div>
+      </div>
+      <div class="button">
+        <div class="icon"><%= image_tag 'book-search-icon.png', alt: 'book-search-icon' %></div>
+        <div class="label"><%= link_to 'Book Search', '#', class: 'link' %></div>
+      </div>
+      <div class="button">
+        <div class="icon"><%= image_tag 'book-add-icon.png', alt: 'book-add-icon' %></div>
+        <div class="label"><%= link_to 'Book Add', '#', class: 'link' %></div>
+      </div>
+    </div>
+
+    <% historys = {
+      '2021-05-08': 'たのしいRuby',
+      '2021-05-09': '初めてのRuby',
+      '2021-05-10': 'Rubyレシピブック',
+      '2021-05-11': 'Rubyディスクトップリファレンス',
+      '2021-05-12': 'プロを目指す人のRuby入門'
+    } %>
+
+    <p class="history-label">Search History</p> 
+      <ul class="history-list">
+        <% historys.each do |key, value| %>
+          <li><%= "#{key}　#{value}" %></li>
+        <% end %>
+      </ul>
+
+    <p class="history-label">Additional History</p>
+      <ul class="history-list">
+        <% historys.each do |key, value| %>
+          <li><%= "#{key}　#{value}" %></li>
+        <% end %>
+      </ul>
+    
+    <p class="collection-of-books">Current Collection of Books：100 books</p>
+  </div>
+</main>
