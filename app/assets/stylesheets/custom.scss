@@ -204,7 +204,14 @@ $from-background-color: rgb(100, 100, 200);
 
 
 
-/* book-add */
+/* new, edit */
+
+.form-frame {
+  background-color: $from-background-color;
+  width: 80%;
+  height: 540px;
+  margin: 0 auto;
+}
 
 .form-title {
   font-size: 2.5em;
@@ -276,15 +283,53 @@ $from-background-color: rgb(100, 100, 200);
   }
 }
 
-.form-frame {
-  background-color: $from-background-color;
-  width: 80%;
-  height: 540px;
-  margin: 0 auto;
-}
 
 .radio-bottun-container {
   margin-top: 0.6em;
   margin-left: 2em;
   color: $font-color;
+}
+
+
+
+/* show */
+
+.form-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11em;
+  margin: 5.5em 0 0 7em;
+}
+
+.form-edit-button {
+  width: 5em;
+  height: 2em;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);    
+  }
+}
+
+.form-destroy-button {
+  width: 5em;
+  height: 2em;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);    
+  }
 }
