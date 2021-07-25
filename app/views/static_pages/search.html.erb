@@ -1,0 +1,17 @@
+<% provide(:title, 'Book-Search') %>
+
+<%= render 'layouts/header' %>
+
+<main>
+  <div class="main-inner">
+    <form class="search-form">
+      <header class="form-title">Book Search</header>
+      <label class="form-label" for="key-word">KeyWord</label>
+      <div class="search-container">
+        <input class="form-input-box" type="search" name="key-word" value="-- Please enter a keyword. --" autocomplete="off">
+        <button class="search-button" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</main>
+

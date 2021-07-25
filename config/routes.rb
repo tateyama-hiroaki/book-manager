@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/book_add', to: 'books#new'
   get '/edit',     to: 'books#edit'
   get '/show',     to: 'books#show'
+  get '/search',    to: 'static_pages#search'
 end
