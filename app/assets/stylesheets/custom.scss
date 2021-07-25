@@ -1,6 +1,7 @@
 /* variable */
 
 $font-color: white;
+$from-background-color: rgb(100, 100, 200);
 
 
 
@@ -176,7 +177,7 @@ $font-color: white;
   background-color: rgb(100, 100, 200);
 }
 
-.profile-form-title {
+.profile-form-title {   /* 重複あり .form-label */
   font-size: 2.5em;
   text-align: center; 
   color: $font-color; 
@@ -201,3 +202,89 @@ $font-color: white;
   }
 }
 
+
+
+/* book-add */
+
+.form-title {
+  font-size: 2.5em;
+  text-align: center; 
+  color: $font-color; 
+  padding-top: 0.7em;
+  margin-bottom: 0.7em;  
+}
+
+.form-label {
+  margin-left: 1.5em;
+  color: $font-color;
+}
+
+.form-input-box {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
+  width: 20em;
+  height: 1.8em;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  color: rgb(74, 59, 172);
+}
+
+.file-select-status {
+  color: $font-color;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-label {
+  color: $font-color;
+}
+
+.img {
+  width: 350px;
+  height: 300px;
+  border: 2px solid white;
+}
+
+.form-button {
+  display: block;
+  margin: 3.6em auto 0 auto;
+  height: 2em;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);    
+  }
+}
+
+.form-frame {
+  background-color: $from-background-color;
+  width: 80%;
+  height: 540px;
+  margin: 0 auto;
+}
+
+.radio-bottun-container {
+  margin-top: 0.6em;
+  margin-left: 2em;
+  color: $font-color;
+}
