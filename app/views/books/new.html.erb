@@ -1,0 +1,50 @@
+<% provide(:title, 'Book-Add') %>
+    
+<%= render 'layouts/header' %>
+
+<main>
+  <div class="main-inner">
+    <form class="form-frame">
+      <header class="form-title">Book Add</header>
+      <div class="main-container">
+        <div class="input-container">
+          <label class="form-label" for="title">Title</label>
+          <input class="form-input-box" type="text" name="title" value="プロを目指す人のためのRuby入門" autocomplete="off">  
+          <label class="form-label" for="publisher">Publisher</label>
+          <input class="form-input-box" type="text" name="publisher" value="技術評論社" autocomplete="off">      
+          <label class="form-label" for="genre-list">Genre</label>
+          <div class="radio-bottun-container">
+            <input type="radio" id="technical-book" name="drone" value="technical-book">
+            <label for="technical-book">専門書</label>
+          </div>
+          <div class="radio-bottun-container">
+            <input type="radio" id="practical-book" name="drone" value="practical-book">
+            <label for="practical-book">実用書</label>
+          </div>
+          <div class="radio-bottun-container">
+            <input type="radio" id="comic" name="drone" value="comic">
+            <label for="comic">コミック</label>
+          </div>
+          <button class="form-button" type="submit">Registration</button>
+        </div>
+        <div class="image-container">
+          <label class="image-label" for="image">Image</label>
+          <img class="img" id="my-image" accept="image/*">
+          <input type="file" class="file-select-status" name="image" id="image" accept="image/*">
+          <script>
+            const target = document.getElementById('image');
+            target.addEventListener('change', function (e) {
+                const file = e.target.files[0]
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("my-image")
+                    img.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }, false);
+          </script>
+        </div>  
+      </div>
+    </form>
+  </div>
+</main>
