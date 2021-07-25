@@ -333,3 +333,38 @@ $from-background-color: rgb(100, 100, 200);
     color: rgb(74, 59, 172);    
   }
 }
+
+
+
+/* search */
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  margin: 3em auto 0 auto;
+  background-color: $from-background-color;
+  padding-bottom: 2em;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  width: 23em;
+  height: 1.6em;
+}
+
+.search-button {
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  padding: 0.3em 0.7em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);
+  }  
+}
