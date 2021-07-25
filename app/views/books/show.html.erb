@@ -1,0 +1,31 @@
+<% provide(:title, 'Show') %>
+
+<%= render 'layouts/header' %>
+
+<main>
+  <div class="main-inner">
+    <form class="form-frame">
+      <header class="form-title">Book Show</header>
+      <div class="main-container">
+        <div class="input-container">
+          <label class="form-label" for="title">Title</label>
+          <input class="form-input-box" type="text" name="title" value="プロを目指す人のためのRuby入門" autocomplete="off">  
+          <label class="form-label" for="publisher">Publisher</label>
+          <input class="form-input-box" type="text" name="publisher" value="技術評論社" autocomplete="off">      
+          <label class="form-label" for="genre">Genre</label>
+          <input class="form-input-box" type="text" name="genre" value="専門書">
+
+        <div class="form-button-container">
+          <button class="form-edit-button">Edit</button>
+          <button class="form-destroy-button">Destroy</button>
+        </div>
+                      
+        </div>
+        <div class="image-container">
+          <label class="image-label" for="image">Image</label>
+          <img class="img" src="#" alt="book">
+        </div>  
+      </div>
+    </form>
+  </div>
+</main>
