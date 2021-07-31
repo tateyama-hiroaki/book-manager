@@ -368,3 +368,96 @@ $from-background-color: rgb(100, 100, 200);
     color: rgb(74, 59, 172);
   }  
 }
+
+
+
+/* signup */
+
+.signup-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.signup-logo {
+  display: block;
+  margin: 1.5em auto 0 auto;
+}
+
+.signup-first-message {
+  font-size: 1.5em;
+  color: $font-color;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  background-color: $from-background-color;
+  margin: 0 auto;
+}
+
+.signup-form-title {
+  font-size: 2.5em;
+  text-align: center; 
+  color: $font-color; 
+  margin-top: 0.7em;
+}
+
+.signup-form-label {
+  margin-left: 1.5em;
+  color: $font-color;
+}
+
+.signup-form-input-box {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  margin: 0 1.5em 1.5em 1.5em;
+  height: 1.8em;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  color: rgb(74, 59, 172);
+  &:focus {
+    color: rgb(74, 59, 172);
+  }
+}
+
+.signup-button {
+  margin: 1.5em 1.3em 3.2em 1.3em;
+  height: 2em;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);
+  }  
+}
+
+.signup-second-message {
+  margin-top: 2em;
+  font-size: 1.3em;
+  color: $font-color;
+  text-align: center;
+}
+
+.signup-signin-button {
+  display: block;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
+  color: $font-color;
+  margin: 0 auto;
+  padding: 0.3em 0.7em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);
+  }
+}
