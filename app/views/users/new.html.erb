@@ -1,0 +1,30 @@
+<% provide(:title, 'Signup') %>
+
+<div class="signup-inner">
+  <%= image_tag 'header-logo-64px.png', class: 'signup-logo', alt: 'book-logo' %>
+
+  <p class="signup-first-message">Welcome to Book-Manager.</p>
+  <p class="signup-first-message">Please enter your account.</p>
+
+  <form class="signup-form">
+    <header class="signup-form-title">Sign up</header>
+
+    <label class="signup-form-label" for="name">Name</label>
+    <input class="signup-form-input-box" type="text" name="name" value="Example User" autocomplete="off">  
+
+    <label class="signup-form-label" for="email">Email</label>
+    <input class="signup-form-input-box" type="email" name="email" value="user@example.com" autocomplete="off">
+
+    <label class="signup-form-label" for="password">Password</label>
+    <input class="signup-form-input-box" type="password" name="password" value="foobar" >
+
+    <label class="signup-form-label" for="confirmation">Confirmation</label>
+    <input class="signup-form-input-box" type="password" name="confirmation" value="foobar">
+
+    <button class="signup-button" type="submit">Sign up</button>
+  </form>
+
+  <p class="signup-second-message">Do you already have an account?</p>
+
+  <button class="signup-signin-button">Sign in</button>
+</div>
