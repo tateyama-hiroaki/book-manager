@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/edit',      to: 'books#edit'
   get '/show',      to: 'books#show'
   get '/search',    to: 'static_pages#search'
-  get '/signup',    to: 'users#new'
+  root 'users#new'
+  resources :users
 end
