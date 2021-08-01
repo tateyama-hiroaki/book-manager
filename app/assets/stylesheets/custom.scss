@@ -404,6 +404,17 @@ $from-background-color: rgb(100, 100, 200);
   margin-top: 0.7em;
 }
 
+.new_user {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: $font-color;
+  margin-top: 2em;
+  margin-left: 1.5em;
+}
+
 .signup-form-label {
   margin-left: 1.5em;
   color: $font-color;
@@ -413,6 +424,7 @@ $from-background-color: rgb(100, 100, 200);
   margin-left: 1.5em;
   margin-bottom: 1.5em;
   margin: 0 1.5em 1.5em 1.5em;
+  width: 26.5em;
   height: 1.8em;
   background-color: rgb(243, 241, 241);
   border: none;
