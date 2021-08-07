@@ -1,0 +1,33 @@
+<% provide(:title, "Sign in") %>
+
+<div class="signin-inner">
+  <%= image_tag 'header-logo-64px.png', class: 'signup-logo', alt: 'book-logo' %>
+  
+  <p class="signin-first-message">Welcome to Book-Manager.</p>
+  <p class="signin-first-message">Please enter your account.</p>  
+
+  <div class="signin-form">
+    <header class="signin-form-title">Sign in</header>
+
+    <%= form_for(:session, url: signin_path, html: { class: 'session' }) do |f| %>
+
+      <% if @error_message %>
+        <div class="session-error-message">
+          <%= @error_message %>
+        </div>
+      <% end %>
+
+      <%= f.label :email, class: 'signin-form-label' %>
+      <%= f.email_field :email, class: 'signin-input-box' %>
+
+      <%= f.label :password, class: 'signin-form-label' %>
+      <%= f.password_field :password, class: 'signin-input-box' %>
+
+      <%= f.submit "Sign in", class: "signin-form-button" %>
+    <% end %>
+  </div>
+
+  <p class="signin-second-message">Are you a new user ?</p>
+
+  <%= link_to "Sign Up", root_path, class: 'signup-link-button' %>
+</div>
