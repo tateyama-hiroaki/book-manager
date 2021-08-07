@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def profile
+    
   end
 
   def search

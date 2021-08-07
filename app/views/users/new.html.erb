@@ -24,11 +24,11 @@
       <%= f.label :password_confirmation, class: "signup-form-label" %>
       <%= f.password_field :password_confirmation, class: "signup-form-input-box" %>
 
-      <%= f.submit "Sign up", class: "signup-button" %>
+      <%= f.submit "Sign up", class: "signup-form-button" %>
     <% end %>
   </div>
 
   <p class="signup-second-message">Do you already have an account?</p>
 
-  <button class="signup-signin-button">Sign in</button>
+  <%= link_to "Sign in", signin_path, class: 'signin-link-button' %>
 </div>
