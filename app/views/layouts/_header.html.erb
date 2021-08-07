@@ -6,7 +6,7 @@
         <p><%= link_to 'Book-Manager', home_path, class: 'header-logo-title' %></p>
       </div>
       <div class="nav-group">
-        <p><%= link_to 'Profile',  '#', class: 'nav-item' %></p>
+        <p><%= link_to 'User Profile', current_user, class: 'nav-item' %></p>
         <p><%= link_to 'Sign out', signout_path, method: :delete, class: 'nav-item' %></p>
       </div>
     </div>
