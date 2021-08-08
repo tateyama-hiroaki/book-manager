@@ -4,28 +4,25 @@
 
 <main>
   <div class="main-inner">
-    <form class="form-frame">
-      <header class="form-title">Book Show</header>
-      <div class="main-container">
-        <div class="input-container">
-          <label class="form-label" for="title">Title</label>
-          <input class="form-input-box" type="text" name="title" value="プロを目指す人のためのRuby入門" autocomplete="off">  
-          <label class="form-label" for="publisher">Publisher</label>
-          <input class="form-input-box" type="text" name="publisher" value="技術評論社" autocomplete="off">      
-          <label class="form-label" for="genre">Genre</label>
-          <input class="form-input-box" type="text" name="genre" value="専門書">
+    <%= form_for(@book) do |f| %>
+      <header class="book-show-form-title">Book Show</header>
 
-        <div class="form-button-container">
-          <button class="form-edit-button">Edit</button>
-          <button class="form-destroy-button">Destroy</button>
-        </div>
-                      
-        </div>
-        <div class="image-container">
-          <label class="image-label" for="image">Image</label>
-          <img class="img" src="#" alt="book">
-        </div>  
+      <%= f.label :title, class: "book-show-form-label" %>
+      <%= f.text_field :title, class: "book-show-form-input-box" %>
+
+      <%= f.label :publisher, class: "book-show-form-label" %>
+      <%= f.text_field :publisher, class: "book-show-form-input-box" %>
+
+      <%= f.label :genre, class: "book-show-form-label" %>
+      <%= f.text_field :genre, class: "book-show-form-input-box" %>
+
+      <%= f.label :image, class: "book-show-form-label" %>
+      <%= image_tag @book.image.url, class: 'img' %>
+
+      <div class="book-show-button-container">
+        <%= link_to 'Edit', edit_book_path, class: 'edit-button' %>
+        <%= link_to 'Destroy', book_path, method: :delete, class: 'destroy-button' %>      
       </div>
-    </form>
+    <% end %>
   </div>
 </main>

@@ -210,135 +210,147 @@ $from-background-color: rgb(100, 100, 200);
 
 
 
-/* new, edit */
+/* books/new */
 
-.form-frame {
+.book-add-form {
+  display: flex;
+  flex-direction: column;
   background-color: $from-background-color;
-  width: 80%;
-  height: 540px;
+  width: 25em;
   margin: 0 auto;
 }
 
-.form-title {
+.book-add-form-title {
   font-size: 2.5em;
   text-align: center; 
   color: $font-color; 
   padding-top: 0.7em;
-  margin-bottom: 0.7em;  
 }
 
-.form-label {
+.new_book {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-add-form-label {
   margin-left: 1.5em;
   color: $font-color;
 }
 
-.form-input-box {
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
+.book-add-form-input-box {
   margin: 0 1.5em 1.5em 1.5em;
-  width: 20em;
-  height: 1.8em;
+  width: 26.5em;
+  height: 1.9em;
   background-color: rgb(243, 241, 241);
   border: none;
   color: rgb(74, 59, 172);
 }
 
-.file-select-status {
+#book_genre {
+  margin: 0 1.5em 1.5em 1.5em;
+  width: 26.9em;
+  height: 2.3em;
+}
+
+.file-select {
+  margin-left: 1.5em;
   color: $font-color;
 }
 
-.input-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-container {
-  display: flex;
-  justify-content: center;
-}
-
-.image-label {
+.book-add-form-button {
+  margin: 1.5em 1.3em 3.2em 1.3em;
+  height: 2em;
+  font-size: 1em;
+  background-color: rgb(124, 111, 206);
+  border: none;
   color: $font-color;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+  &:focus {
+    background-color: white;
+    color: rgb(74, 59, 172);
+  }
+}
+
+
+
+
+
+/* books/show */
+
+.edit_book {
+  display: flex;
+  flex-direction: column;
+  background-color: $from-background-color;
+  width: 25.5em;
+  height: 43.5em;
+  margin: 0 auto;
+}
+
+.book-show-form-title {
+  font-size: 2.5em;
+  text-align: center; 
+  color: $font-color; 
+  margin-top: 0.7em;  
+}
+
+.book-show-form-label {
+  margin-left: 1.5em;
+  color: $font-color;
+}
+
+.book-show-form-input-box {
+  margin: 0 1.5em 1.5em 1.5em;
+  width: 26.9em;
+  height: 2.3em;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  color: rgb(74, 59, 172);
+  &:focus {
+    color: rgb(74, 59, 172);
+  }
 }
 
 .img {
-  width: 350px;
-  height: 300px;
-  border: 2px solid white;
+  width: 13em;
+  height: 16em;
+  margin-top: 0.5em;
+  margin-left: 1.5em;
+  border: solid 3px white;
 }
 
-.form-button {
-  display: block;
-  margin: 3.6em auto 0 auto;
-  height: 2em;
-  font-size: 1em;
-  background-color: rgb(124, 111, 206);
-  border: none;
-  color: $font-color;
-  &:hover {
-    background-color: rgb(160, 153, 216);
-  }
-  &:focus {
-    background-color: white;
-    color: rgb(74, 59, 172);    
-  }
-}
-
-
-.radio-bottun-container {
-  margin-top: 0.6em;
-  margin-left: 2em;
-  color: $font-color;
-}
-
-
-
-/* show */
-
-.form-button-container {
+.book-show-button-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 11em;
-  margin: 5.5em 0 0 7em;
+  justify-content: flex-end;
+  margin-top: 2em;
 }
 
-.form-edit-button {
-  width: 5em;
-  height: 2em;
-  font-size: 1em;
+.edit-button {
   background-color: rgb(124, 111, 206);
-  border: none;
   color: $font-color;
+  width: 5em;
+  text-align: center;
+  margin-right: 1em;
+  text-decoration: none;
   &:hover {
     background-color: rgb(160, 153, 216);
   }
-  &:focus {
-    background-color: white;
-    color: rgb(74, 59, 172);    
-  }
 }
 
-.form-destroy-button {
-  width: 5em;
-  height: 2em;
-  font-size: 1em;
+.destroy-button {
   background-color: rgb(124, 111, 206);
-  border: none;
+  width: 5em;
   color: $font-color;
+  text-align: center;
+  margin-right: 1em;
+  text-decoration: none;
   &:hover {
     background-color: rgb(160, 153, 216);
   }
-  &:focus {
-    background-color: white;
-    color: rgb(74, 59, 172);    
-  }
 }
+
+
 
 
 
