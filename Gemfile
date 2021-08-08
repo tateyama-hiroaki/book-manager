@@ -9,6 +9,8 @@ gem 'sass-rails', '5.1.0'
 gem 'turbolinks', '5.2.0'
 gem 'webpacker',  '4.0.7'
 gem 'bcrypt'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development, :test do
   gem 'byebug',  '11.0.1', platforms: %i[mri mingw x64_mingw]
