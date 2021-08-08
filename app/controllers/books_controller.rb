@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.paginate(page: params[:page], per_page: 10)
+    @books_count = Book.count
   end
 
   def show
