@@ -149,21 +149,69 @@ $from-background-color: rgb(100, 100, 200);
 
 
 
-/* index (book-list) */
+
+
+/* books/index */
 
 .book-list-frame {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   margin-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
   padding-left: 0;
+}
+
+.book-list {
+  list-style-type: none;
+  margin-top: 1em;
 }
 
 .book {
   color: $font-color;
-  list-style-type: none;
-  margin-top: 0.5em;
+  text-decoration: none;
 }
+
+.pagination a {
+  color: $font-color;
+  text-decoration: none;
+  border: solid 1px white;
+  padding: 0.4em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+}
+
+.previous_page {
+  color: $font-color;
+  border: solid 1px white;
+  padding: 0.4em;
+  margin-right: 0.3em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+}
+
+.current {
+  color: $font-color;
+  border: solid 1px white;
+  padding: 0.4em;
+  margin-right: 0.3em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+}
+
+.next_page {
+  color: $font-color;
+  border: solid 1px white;
+  padding: 0.4em;
+  margin: 0.3em;
+  &:hover {
+    background-color: rgb(160, 153, 216);
+  }
+}
+
+
 
 
 

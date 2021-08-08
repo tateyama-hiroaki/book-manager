@@ -1,27 +1,21 @@
-<% provide(:title, 'Book List') %>
+<% provide(:title, 'Books List') %>
 
 <%= render 'layouts/header' %>
 
 <main>
   <div class="main-inner">
-    <label class="menu-label">Book List</label>
-
-    <% book_list = [
-      'たのしいRuby',
-      '初めてのRuby',
-      'Rubyレシピブック',
-      'Rubyディスクトップリファレンス',
-      'プロを目指す人のRuby入門'
-    ] %>
-
+    <label class="menu-label">Books List</label>
+    
     <ul class="book-list-frame">
-      <% 4.times do |n| %>
-        <% book_list.each do |book| %>
-          <li class="book"><%= "#{book}" %></li>
-        <% end %>
+      <% @books.each do |book| %>
+        <li class="book-list">
+          <%= link_to book.title, book_path(book), class: 'book' %>
+        </li>    
       <% end %>
     </ul>
-
-    <p class="collection-of-books">Current Collection of Books：100 books</p>
+    
+    <%= will_paginate @books %>
+      
+    <p class="collection-of-books">Current Collection of Books：<%= @books_count %> books</p>
   </div>
 </main>
