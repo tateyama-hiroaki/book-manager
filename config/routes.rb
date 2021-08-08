@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   get    '/home',      to: 'static_pages#home'
   get    '/search',    to: 'static_pages#search'
 
-  get    '/index',     to: 'books#index'
-  get    '/edit',      to: 'books#edit'
-  get    '/show',      to: 'books#show'
-  
   get    '/signup',    to: 'users#new'
   
   resources :users
