@@ -12,6 +12,7 @@ gem 'bcrypt'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'will_paginate'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug',  '11.0.1', platforms: %i[mri mingw x64_mingw]
