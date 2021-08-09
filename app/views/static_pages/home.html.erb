@@ -19,29 +19,7 @@
         <div class="label"><%= link_to 'Book Add', new_book_path, class: 'link' %></div>
       </div>
     </div>
-
-    <% historys = {
-      '2021-05-08': 'たのしいRuby',
-      '2021-05-09': '初めてのRuby',
-      '2021-05-10': 'Rubyレシピブック',
-      '2021-05-11': 'Rubyディスクトップリファレンス',
-      '2021-05-12': 'プロを目指す人のRuby入門'
-    } %>
-
-    <p class="history-label">Search History</p> 
-      <ul class="history-list">
-        <% historys.each do |key, value| %>
-          <li><%= "#{key}　#{value}" %></li>
-        <% end %>
-      </ul>
-
-    <p class="history-label">Additional History</p>
-      <ul class="history-list">
-        <% historys.each do |key, value| %>
-          <li><%= "#{key}　#{value}" %></li>
-        <% end %>
-      </ul>
     
-    <p class="collection-of-books">Current Collection of Books：100 books</p>
+    <p class="collection-of-books">Current Collection of Books：<%= @books_count %> books</p>
   </div>
 </main>
