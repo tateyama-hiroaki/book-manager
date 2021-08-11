@@ -258,6 +258,8 @@ $from-background-color: rgb(100, 100, 200);
 
 
 
+
+
 /* books/new */
 
 .book-add-form {
@@ -460,7 +462,7 @@ $from-background-color: rgb(100, 100, 200);
 
 
 
-/* search */
+/* static_pages/search */
 
 .search-form {
   display: flex;
@@ -471,19 +473,41 @@ $from-background-color: rgb(100, 100, 200);
   padding-bottom: 2em;
 }
 
+.book-search-form-title {
+  font-size: 2.5em;
+  text-align: center; 
+  color: $font-color; 
+  margin-top: 0.7em;
+}
+
+.search-form-label {
+  margin-top: 1em;
+  margin-left: 1.5em;
+  color: $font-color;  
+}
+
 .search-container {
   display: flex;
   justify-content: space-between;
-  width: 23em;
-  height: 1.6em;
+  align-items: center;
 }
 
-.search-button {
+.search-form-input-box {
+  margin: 0 0 0 1.5em;
+  width: 20em;
+  height: 1.9em;
+  background-color: rgb(243, 241, 241);
+  border: none;
+  color: rgb(74, 59, 172);
+}
+
+.search-form-bottun {
+  margin: 0 1em 0 0;
   font-size: 1em;
   background-color: rgb(124, 111, 206);
   border: none;
   color: $font-color;
-  padding: 0.3em 0.7em;
+  padding: 0.2em 0.7em;
   &:hover {
     background-color: rgb(160, 153, 216);
   }
@@ -492,6 +516,31 @@ $from-background-color: rgb(100, 100, 200);
     color: rgb(74, 59, 172);
   }  
 }
+
+.search-result-label {
+  color: $font-color;
+  font-size: 1.5em;
+  border-bottom: 2px solid white;
+  margin: 2em auto 0 auto;
+  padding-bottom: 0.2em;
+  width: 22em;
+}
+
+.search-result-area {
+  margin-left: 13.5em;
+  padding: 0;
+  width: 30em;
+}
+
+.search-result-books-list {
+  list-style-type: none;
+}
+
+.search-result-books {
+  color: $font-color;  
+}
+
+
 
 
 

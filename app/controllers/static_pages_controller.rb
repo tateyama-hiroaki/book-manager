@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def search
+    @books = Book.search(params[:search])
   end
 end
