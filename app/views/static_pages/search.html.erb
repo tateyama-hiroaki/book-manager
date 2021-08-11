@@ -1,17 +1,28 @@
-<% provide(:title, 'Book-Search') %>
+<% provide(:title, 'Book Search') %>
 
 <%= render 'layouts/header' %>
 
-<main>
-  <div class="main-inner">
-    <form class="search-form">
-      <header class="form-title">Book Search</header>
-      <label class="form-label" for="key-word">KeyWord</label>
-      <div class="search-container">
-        <input class="form-input-box" type="search" name="key-word" value="-- Please enter a keyword. --" autocomplete="off">
-        <button class="search-button" type="submit">Search</button>
-      </div>
-    </form>
-  </div>
-</main>
+<div class="main-inner">
+  <%= form_tag(search_path,:method => 'get', class: "search-form") do %>
+    <header class="book-search-form-title">Book Search</header>
+    
+    <%= label_tag :search, 'keyword', class: 'search-form-label' %>
+    
+    <div class="search-container">
+      <%= text_field_tag :search, nil, class: 'search-form-input-box' %>
+      <%= submit_tag 'Search', class: 'search-form-bottun' %>
+    </div>
+  <% end %>
 
+  <div class="search-result-label">
+    Book Search Result
+  </div>
+
+  <ul class="search-result-area">
+    <% @books.each do |book| %>
+    <li class="search-result-books-list">
+      <%= link_to book.title, book, class: 'search-result-books' %>
+    </li>
+    <% end %>
+  </ul>
+</div>
