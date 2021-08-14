@@ -1,24 +1,24 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.paginate(page: params[:page], per_page: 10)
-    @books_count = Book.count
+    @books = current_user.books.paginate(page: params[:page], per_page: 10)
+    @books_count = current_user.books.count
   end
 
   def show
-    @book = Book.find(params[:id])
+    @book =current_user.books.find(params[:id])
   end
 
   def new
-    @book = Book.new
+    @book = current_user.books.build
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
   end
 
   def create
-    @book = Book.new(book_params)
-    if @book.save
+    @book = current_user.books.create(book_params)
+    if @book
       redirect_to @book
     else
       render 'new'
@@ -26,7 +26,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
     if @book.update(book_params)
       redirect_to @book
     else
@@ -35,7 +35,7 @@ class BooksController < ApplicationController
   end
   
   def destroy
-    @book = Book.find(params[:id])
+    @book = current_user.books.find(params[:id])
     @book.destroy
     redirect_to home_path
   end
