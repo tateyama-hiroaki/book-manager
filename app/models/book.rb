@@ -9,4 +9,6 @@ class Book < ApplicationRecord
       Book.all
     end
   end
+
+  belongs_to :user
 end

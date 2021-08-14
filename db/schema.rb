@@ -17,8 +17,11 @@ ActiveRecord::Schema.define(version: 2021_08_07_114924) do
     t.string "publisher"
     t.string "genre"
     t.string "image"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_books_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,4 +33,5 @@ ActiveRecord::Schema.define(version: 2021_08_07_114924) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "books", "users"
 end

@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-    @books_count = Book.count
+    @books_count = current_user.books.count
   end
 
   def search
-    @books = Book.search(params[:search])
+    @books = current_user.books.search(params[:search])
   end
 end
